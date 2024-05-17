@@ -22,38 +22,7 @@ unsigned int two_to_n(unsigned int num, char degree)
     }
     return num;
 }
-void play_song(const PlayingNote* song, int length, int BPM)
-{
-    // calculate beat length in terms of microseconds
-    int beat_length = (int)(6000000 / BPM);
-    int W_length = 4 * beat_length;
-    int H_length = 2 * beat_length;
-    int Q_length = beat_length;
-    int Ei_length = beat_length / 2;
-    int i;
-    for (i = 0; i < length; i++)
-    {
-       
-        Duration duration = song[i].duration;
-        switch (duration)
-        {
-        case W:
-            play_note(song[i].note, W_length, song[i].ocative);
-            break;
-        case H:
-            play_note(song[i].note, H_length, song[i].ocative);
-            break;
-        case Q:
-            play_note(song[i].note, Q_length, song[i].ocative);
-            break;
-        case Ei:
-            play_note(song[i].note, Ei_length, song[i].ocative);
-            break;
-        default:
-            break;
-        }
-    }
-}
+
 
 void play_note(const Note note, const int duration, const int ocative)
 {

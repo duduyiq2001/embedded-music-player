@@ -25,7 +25,6 @@ typedef struct {
 // ocative 4  -> ocative = 0
 // ocative 5   -> ocative = 1
 
-void play_song(const PlayingNote* song, int length, int BPM); 
 void play_note(const Note note, const int duration, const int ocative);
  
 #endif

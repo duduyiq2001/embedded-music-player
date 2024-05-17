@@ -20,7 +20,7 @@ int get_key();
 
 int is_pressed(int r, int c);
 
-char get_char();
+char get_char_wait();
 
-char get_char1();
+char get_char_no_wait();
 #endif

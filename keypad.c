@@ -42,7 +42,7 @@ int is_pressed(int r, int c) {
 	return 0;
 }
 
-char get_char(){
+char get_char_wait(){
 
 	while(!get_key()){
 
@@ -57,7 +57,7 @@ char get_char(){
 }
 
 
-char get_char1(){
+char get_char_no_wait(){
 	
 	int ret_key = get_key();
 	wait_avr(5);
