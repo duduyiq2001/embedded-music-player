@@ -15,7 +15,7 @@
 
 
 PlayingNote every_breath_you_take1[] = {
-     {As, Q, 0}, // D# in octave 4, Quarter note
+    {As, Q, 0}, // D# in octave 4, Quarter note
     {N,Q,0},
     {Gs, Q, 0}, // A in octave 4, Quarter note
     {N, Q, 0},

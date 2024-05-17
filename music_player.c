@@ -75,10 +75,14 @@ char play_song(const PlayingNote* song, int length, int BPM) {
 
 void basic_music_player_sm () {
     // get_char_wait(); 
-    lcd_init();
+    initialize_sm(); 
 
-    char res = play_song(every_breath_you_take, every_breath_you_take_num_notes, every_breath_you_take_bpm ); 
-    char song_speed = '1';
+    // char res = play_song(every_breath_you_take, every_breath_you_take_num_notes, every_breath_you_take_bpm ); 
+    // char song_speed = '1';
+
+    char res = song_selector(); 
+    char song_speed = get_song_speed(); 
+    change_speed(song_speed);
 
 
     while (1) {
@@ -102,8 +106,6 @@ void basic_music_player_sm () {
 
 
     }
-
-
 }
 
 char song_selector() {
@@ -197,4 +199,10 @@ void change_speed(char input) {
 
             
     }
+}
+
+
+void initialize_sm() {
+    lcd_init(); 
+    lcd_clr(); 
 }
