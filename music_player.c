@@ -1,7 +1,6 @@
 #include "music_player.h"
 #include "songs.h"
-char play_song(const PlayingNote* song, int length, int BPM)
-{
+char play_song(const PlayingNote* song, int length, int BPM) {
     lcd_clr(); 
     lcd_pos(0, 0);
     lcd_puts2(song_names_list[0]);
@@ -74,7 +73,6 @@ char play_song(const PlayingNote* song, int length, int BPM)
         return '\0';
 }
 
-
 void basic_music_player_sm () {
     // get_char_wait(); 
     lcd_init();
@@ -100,6 +98,7 @@ void basic_music_player_sm () {
 
         res = song_selector(); 
         song_speed = get_song_speed(); 
+        change_speed(song_speed);
 
 
     }
@@ -153,7 +152,7 @@ char get_song_speed (){
     return get_char_wait(); 
 }
 
-int calc_song_speed(int song_speed) {
+unsigned short calc_song_speed(int song_speed) {
     switch (CURR_SPEED) {
         case NORMAL: 
             return song_speed; 
@@ -165,15 +164,17 @@ int calc_song_speed(int song_speed) {
             return song_speed *.5; 
             break; 
     }
+
+    return song_speed; 
 }
 
-void change_speed(char input) 
+void change_speed(char input) {
     
     char user_in = input; 
     while (user_in != '1' && user_in != '2' && user_in != '3') {
         lcd_clr(); 
         lcd_pos(0,0);
-        lcd_puts("Select 1, 2, or 3");
+        lcd_puts2("Select 1, 2, or 3");
         
 
         user_in = get_song_speed(); 
@@ -191,6 +192,7 @@ void change_speed(char input)
             CURR_SPEED = SLOWED_DOWN; 
             break;
         default:
+            break;
 
 
             
