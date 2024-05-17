@@ -10,6 +10,7 @@
 #include "notes.h"
 #define TESTNOTE 1
 #include "music_player.h"
+#include "songs.h"
 
 
 
@@ -26,16 +27,16 @@ PlayingNote every_breath_you_take1[] = {
     {N, Q, 0},
   
 };
-void test_note()
-{
-    Note mynote = Gs;
-    play_note(mynote, 100000, -1);
-    play_note(mynote,100000,0);
-    mynote = As;
-     play_note(mynote,100000,0);
+// void test_note()
+// {
+//     Note mynote = Gs;
+//     play_note(mynote, 100000, -1);
+//     play_note(mynote,100000,0);
+//     mynote = As;
+//      play_note(mynote,100000,0);
 
-    // wait_avr(2000);
-}
+//     // wait_avr(2000);
+// }
 
 int main(void)
 {

@@ -1,7 +1,6 @@
 #ifndef SONGS_H
 #define SONGS_H
 
-#endif
 
 int every_breath_you_take_num_notes; 
 int every_breath_you_take_bpm; 
@@ -133,3 +132,5 @@ PlayingNote every_breath_you_take[] = {
 };
 
 
+
+#endif

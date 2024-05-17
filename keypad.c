@@ -1,9 +1,13 @@
+#ifndef KEYPAD_H
+#define KEYPAD_H
+
+
 #include "keypad.h"
 #include "utility.h"
 #include <avr/io.h>
 
 
-const characters [] = {'\0','1', '2', '3', 'A','4','5','6','B','7','8','9', 'C', '*', '0', '#', 'D' };
+const char characters[] = {'\0','1', '2', '3', 'A','4','5','6','B','7','8','9', 'C', '*', '0', '#', 'D' };
 
 
 int get_key() {
@@ -64,3 +68,5 @@ char get_char_no_wait(){
 	return characters[ret_key];
 	
 }
+
+#endif
