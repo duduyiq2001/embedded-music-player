@@ -103,14 +103,14 @@ lcd_put(char c)
   write(c, 1);
 }
 
-void
-lcd_puts1(const char *s)
-{
-  char c;
-  while ((c = pgm_read_byte(s++)) != 0) {
-    write(c, 1);
-  }
-}
+// void
+// lcd_puts1(const char *s)
+// {
+//   char c;
+//   while ((c = pgm_read_byte(s++)) != 0) {
+//     write(c, 1);
+//   }
+// }
 
 void
 lcd_puts2(const char *s)
