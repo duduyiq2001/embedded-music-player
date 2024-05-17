@@ -2,8 +2,8 @@
 #define SONGS_H
 
 
-int every_breath_you_take_num_notes; 
-int every_breath_you_take_bpm; 
+int every_breath_you_take_num_notes = 96; 
+int every_breath_you_take_bpm = 117; 
 PlayingNote every_breath_you_take[] = {
     //// first part 32
     {Gs, Q, 0}, // A in octave 4, Quarter note

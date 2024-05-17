@@ -43,7 +43,7 @@ int main(void)
     /* Replace with your application code */
     DDRB = 8;
     while(1){
-    play_song(every_breath_you_take, 96, 440);
+        play_song(every_breath_you_take, 96, 440);
     }
     //test_note();
 }
