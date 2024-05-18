@@ -104,7 +104,7 @@ PlayingNote every_breath_you_take_high[] = {
   {N, Q, 0},
   {A, Q, -1}, // F# in octave 5, Quarter note
   {N, Q, 0},
-  {Bs, Q, 0}, // G in octave 5, Quarter note
+  {C, Q, 0}, // G in octave 5, Quarter note
 
   {N, Q, 0},
   {E, Q, 0}, // F in octave 5, Quarter note
@@ -112,11 +112,11 @@ PlayingNote every_breath_you_take_high[] = {
   {D, Q, 1}, // B in octave 4, Quarter note
   {N, Q, 0},
 
-  {Bs, Q, 0}, // E in octave 4, Quarter note
+  {C, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // G in octave 4, Quarter note
   {N, Q, 0},
-  {Bs, Q, 0}, // E in octave 4, Quarter note
+  {C, Q, 0}, // E in octave 4, Quarter note
 
   {N, Q, 0},
   {A, Q, 0}, // B in octave 4, Quarter note
@@ -124,19 +124,19 @@ PlayingNote every_breath_you_take_high[] = {
   {A, Q, -1}, // F# in octave 5, Quarter note
   {N, Q, 0},
 
-  {Bs, Q, 0}, // G in octave 5, Quarter note
+  {C, Q, 0}, // G in octave 5, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // F in octave 5, Quarter note
   {N, Q, 0},
   {D, Q, 1}, // B in octave 4, Quarter note
 
   {N, Q, 0},
-  {Bs, Q, 0}, // E in octave 4, Quarter note
+  {C, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // G in octave 4, Quarter note
   {N, Q, 0},
 
-  {Bs, Q, 0}, // E in octave 4, Quarter note
+  {C, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
 
   // second part
@@ -410,7 +410,7 @@ PlayingNote i_was_never_there_higher[] = {
   {C, W, 0},
   {C, W, -1}, // Fs in octave 5, Quarter note
 
-  {Es, W, 1},
+  {Fs, W, 1},
   {Ds, W, 1}, // G in octave 5, Quarter note
   {C, W, 0},
   {Fs, W, 1},
