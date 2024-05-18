@@ -5,7 +5,7 @@
  * Author : Administrator
  */
 
-sinclude <avr/io.h>
+#include <avr/io.h>
 #include "utility.h"
 #include "notes.h"
 #include "keypad.h"
@@ -104,7 +104,7 @@ PlayingNote every_breath_you_take_high[] = {
   {N, Q, 0},
   {A, Q, -1}, // F# in octave 5, Quarter note
   {N, Q, 0},
-  {Bb, Q, 0}, // G in octave 5, Quarter note
+  {Bs, Q, 0}, // G in octave 5, Quarter note
 
   {N, Q, 0},
   {E, Q, 0}, // F in octave 5, Quarter note
@@ -112,11 +112,11 @@ PlayingNote every_breath_you_take_high[] = {
   {D, Q, 1}, // B in octave 4, Quarter note
   {N, Q, 0},
 
-  {Bb, Q, 0}, // E in octave 4, Quarter note
+  {Bs, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // G in octave 4, Quarter note
   {N, Q, 0},
-  {Bb, Q, 0}, // E in octave 4, Quarter note
+  {Bs, Q, 0}, // E in octave 4, Quarter note
 
   {N, Q, 0},
   {A, Q, 0}, // B in octave 4, Quarter note
@@ -124,19 +124,19 @@ PlayingNote every_breath_you_take_high[] = {
   {A, Q, -1}, // F# in octave 5, Quarter note
   {N, Q, 0},
 
-  {Bb, Q, 0}, // G in octave 5, Quarter note
+  {Bs, Q, 0}, // G in octave 5, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // F in octave 5, Quarter note
   {N, Q, 0},
   {D, Q, 1}, // B in octave 4, Quarter note
 
   {N, Q, 0},
-  {Bb, Q, 0}, // E in octave 4, Quarter note
+  {Bs, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
   {E, Q, 0}, // G in octave 4, Quarter note
   {N, Q, 0},
 
-  {Bb, Q, 0}, // E in octave 4, Quarter note
+  {Bs, Q, 0}, // E in octave 4, Quarter note
   {N, Q, 0},
 
   // second part
@@ -181,9 +181,9 @@ PlayingNote every_breath_you_take_high[] = {
   {N, Q, 0},
 
   // third part
-  {Db, Q, 1}, // B in octave 4, Quarter note
+  {Ds, Q, 1}, // B in octave 4, Quarter note
   {N, Q, 0},
-  {Db, Q, 0}
+  {Ds, Q, 0}
 }; 
 PlayingNote every_breath_you_take[] = {
     //// first part 32
