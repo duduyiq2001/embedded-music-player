@@ -516,7 +516,7 @@ int main(void)
             lcd_clr();
             lcd_puts2("i was never there");
             lcd_pos(1, 0); 
-            lcd_puts("BPM 1: 150, 2: 220, 3: 1000");
+            lcd_puts2("BPM 1: 150, 2: 220, 3: 1000");
 
 
             // initialize settings
