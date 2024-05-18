@@ -404,40 +404,40 @@ PlayingNote i_was_never_there[] = {
 
 };
 PlayingNote i_was_never_there_higher[] = {
-  {Eb, W, 1}, // E in octave 4, Quarter note
-  {Db, W, 1},
-  {Db, W, 0}, // B in octave 4, Quarter note
+  {Es, W, 1}, // E in octave 4, Quarter note
+  {Ds, W, 1},
+  {Ds, W, 0}, // B in octave 4, Quarter note
   {C, W, 0},
   {C, W, -1}, // Fs in octave 5, Quarter note
 
-  {Eb, W, 1},
-  {Db, W, 1}, // G in octave 5, Quarter note
+  {Es, W, 1},
+  {Ds, W, 1}, // G in octave 5, Quarter note
   {C, W, 0},
-  {Eb, W, 1},
-  {Db, W, 1}, // E in octave 4, Quarter note
+  {Es, W, 1},
+  {Ds, W, 1}, // E in octave 4, Quarter note
 
   {C, W, 0},
-  {Db, W, 1}, // B in octave 4, Quarter note
+  {Ds, W, 1}, // B in octave 4, Quarter note
   {C, W, 0},
-  {Db, W, 1}, // Fs in octave 5, Quarter note
-  {Eb, W, 1},
+  {Ds, W, 1}, // Fs in octave 5, Quarter note
+  {Es, W, 1},
 
   {F, W, 1}, // G in octave 5, Quarter note
   {C, W, 0},
-  {Db, W, 1},
+  {Ds, W, 1},
   {C, W, -1}, // Fs in octave 5, Quarter note
 
-  {Db, W, 0},
+  {Ds, W, 0},
   {F, W, 1},
   {D, W, 1},
   {D, W, 0},
-  {Db, W, 1},
+  {Ds, W, 1},
 
-  {Eb, W, 1},
+  {Es, W, 1},
   {F, W, 1},
-  {Db, W, 0},
-  {Eb, W, 1},
-  {Db, W, 1},
+  {Ds, W, 0},
+  {Es, W, 1},
+  {Ds, W, 1},
 
   {C, W, 0},
   {C, W, -1},
@@ -607,7 +607,7 @@ int main(void)
             PlayingNote* processed_song = process_song(every_breath_you_take,128, incre);
                  play_song(processed_song, 128, BPM);
                free(processed_song);
-        lcd_clr();
+            lcd_clr();
             //display song on lcd
         }
         // play_song()
