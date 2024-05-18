@@ -41,3 +41,20 @@ void wait_micro(unsigned short microsec){
 	}
 	TCCR0 = 0;
 }
+
+
+
+void set_port(char* portname, char portnum){
+	*portname = *portname | 0x01 << portnum;
+	
+}
+
+void clear_port(char* portname, char portnum){
+	*portname = *portname & (~(0x01 << portnum));
+	
+}
+
+char get_pin(char* portname, char portnum){
+	
+	return *portname & 0x01 << portnum;
+}
