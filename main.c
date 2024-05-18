@@ -404,7 +404,7 @@ PlayingNote i_was_never_there[] = {
 
 };
 PlayingNote i_was_never_there_higher[] = {
-  {Es, W, 1}, // E in octave 4, Quarter note
+  {Fs, W, 1}, // E in octave 4, Quarter note
   {Ds, W, 1},
   {Ds, W, 0}, // B in octave 4, Quarter note
   {C, W, 0},
@@ -413,14 +413,14 @@ PlayingNote i_was_never_there_higher[] = {
   {Es, W, 1},
   {Ds, W, 1}, // G in octave 5, Quarter note
   {C, W, 0},
-  {Es, W, 1},
+  {Fs, W, 1},
   {Ds, W, 1}, // E in octave 4, Quarter note
 
   {C, W, 0},
   {Ds, W, 1}, // B in octave 4, Quarter note
   {C, W, 0},
   {Ds, W, 1}, // Fs in octave 5, Quarter note
-  {Es, W, 1},
+  {Fs, W, 1},
 
   {F, W, 1}, // G in octave 5, Quarter note
   {C, W, 0},
@@ -433,10 +433,10 @@ PlayingNote i_was_never_there_higher[] = {
   {D, W, 0},
   {Ds, W, 1},
 
-  {Es, W, 1},
+  {Fs, W, 1},
   {F, W, 1},
   {Ds, W, 0},
-  {Es, W, 1},
+  {Fs, W, 1},
   {Ds, W, 1},
 
   {C, W, 0},
