@@ -9,6 +9,8 @@
 #include "utility.h"
 #include "notes.h"
 #include "keypad.h"
+#include "lcd.h"
+#include <stdlib.h>
 #define TESTNOTE 1
 
 PlayingNote every_breath_you_take[] = {
@@ -254,23 +256,90 @@ int main(void)
     lcd_init();
     while (1)
     {
+        char choice = get_char();
+       
         // play_song(every_breath_you_take, 128, 550);
-        if (get_char1() == '1')
+        if (choice == '1')
         {
              // display song on lcd
             lcd_clr();
             lcd_puts2("i was never there");
-            play_song(i_was_never_there, 32, 220);
-           
+
+            // initialize settings
+            int BPM = -1;
+            char tempo = get_char();
+            switch(tempo){
+                case '1':
+                    BPM = 150;
+                    break;
+                case '2':
+                    BPM = 220;
+                    break;
+                case '3':
+                    BPM = 1000;
+                    break;
+            }
+            int incre = 0;
+              char pitch = get_char();
+            switch(pitch){
+                case '4':
+                   incre = -1;
+                   break;
+                case '5':
+                    incre = 0;
+                    break;
+                case '6':
+                    incre = 1;
+                    break;
+            }
+
+            PlayingNote* processed_song = process_song(i_was_never_there,32, incre);
+            
+            play_song(processed_song, 32, BPM);
+            free(processed_song);
+           lcd_clr();
         }
 
-        if (get_char1() == '2')
+        if (choice == '2')
         {
              // display song on lcd
             lcd_clr();
             lcd_puts2("every breath you take");
-            play_song(every_breath_you_take, 128, 550);
+       
+            
+            // initialize settings
+            int BPM = -1;
+            char tempo = get_char();
+            switch(tempo){
+                case '1':
+                    BPM = 450;
+                    break;    
+                case '2':
+                    BPM = 1000;
+                    break;
+                case '3':
+                    BPM = 2000;
+                    break;
         
+            }
+             int incre = 0;
+              char pitch = get_char();
+            switch(pitch){
+                case '4':
+                   incre = -1;
+                   break;
+                case '5':
+                    incre = 0;
+                    break;
+                case '6':
+                    incre = 1;
+                    break;
+            }
+
+            PlayingNote* processed_song = process_song(every_breath_you_take,128, incre);
+                 play_song(processed_song, 128, BPM);
+               free(processed_song);
+        lcd_clr();
             //display song on lcd
         }
         // play_song()

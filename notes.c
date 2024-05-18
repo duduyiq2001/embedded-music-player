@@ -3,7 +3,8 @@
 #include <avr/io.h>
 #include "notes.h"
 #include "utility.h"
-#include "keypad.h"
+#include "keypad.h" 
+#include <stdlib.h> 
 unsigned int periods[12] = {382, 360, 340, 321, 303, 286, 270, 255, 240, 227, 214, 202}; // 10 microsecond
 unsigned int two_to_power(int degree)
 {
@@ -35,7 +36,7 @@ void play_song(const PlayingNote *song, int length, int BPM)
     for (i = 0; i < length; i++)
     {  
         if(get_char1() == '*'){
-            break;
+            while(get_char1()!= '*');
         }
         Duration duration = song[i].duration;
         switch (duration)
@@ -139,6 +140,33 @@ void play_note_inter(const Note note1, const int oc1, const Note note2, const in
         CLR_BIT(PORTB, 3);
         wait_micro(TH1);
     }
+}
+
+
+PlayingNote* process_song(const PlayingNote* song, int length, int pitch_incre){
+
+    PlayingNote* processed_song = malloc(length * sizeof(PlayingNote));
+    for (int i = 0; i < length; i++){
+        if(song[i].note == N){
+            processed_song[i].note = N;
+             processed_song[i].ocative = song[i].ocative;
+               processed_song[i].duration = song[i].duration;
+        }
+        else{
+        processed_song[i].note = song[i].note + (Note)(pitch_incre);
+        if(song[i].note == B && pitch_incre > 0){
+            processed_song[i].ocative = song[i].ocative + 1;
+            processed_song[i].note = C;
+        }
+          if(song[i].note == C && pitch_incre <0){
+            processed_song[i].ocative = song[i].ocative -1;
+            processed_song[i].note = B;
+        }
+        processed_song[i].duration = song[i].duration;
+        }
+    
+    }
+    return processed_song;
 }
 // TH
 // TL

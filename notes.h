@@ -28,5 +28,6 @@ typedef struct {
 void play_song(const PlayingNote* song, int length, int BPM); 
 void play_note(const Note note, const long duration, const int ocative);
 void play_note_inter(const Note note1, const int oc1, const Note note2, const int oc2, const long duration,const int divide);
+PlayingNote* process_song(const PlayingNote* song, int length, int pitch_incre);
  
 #endif
