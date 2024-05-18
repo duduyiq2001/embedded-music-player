@@ -96,6 +96,9 @@ void basic_music_player_sm () {
             //     res = play_song(every_breath_you_take, every_breath_you_take_num_notes, every_breath_you_take_bpm ); 
             case '1':
                 res = print_and_play_selected_song(every_breath_you_take, every_breath_you_take_num_notes, calc_song_speed(every_breath_you_take_bpm), res - '1' );
+                break;
+            
+
         }
 
         
@@ -116,7 +119,12 @@ char song_selector() {
         lcd_puts2(buf); 
 
         print_music_list(); 
-        return get_char_wait(); 
+        char user_in;
+        do {
+            user_in = get_char_wait(); 
+        } while (user_in - '0' > song_names_list_length )
+
+
 }
 
 void print_music_list() {

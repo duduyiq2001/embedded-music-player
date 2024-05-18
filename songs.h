@@ -1,6 +1,13 @@
 #ifndef SONGS_H
 #define SONGS_H
 
+#include "notes.h"
+
+typedef struct SongDetailed {
+    int num_notes; 
+    int bpm; 
+    PlayingNote* pn; 
+}; 
 
 int every_breath_you_take_num_notes = 96; 
 int every_breath_you_take_bpm = 117; 
@@ -130,6 +137,10 @@ PlayingNote every_breath_you_take[] = {
 
 
 };
+
+SongDetailed new_song_detailed (PlayingNote* playing_note, int num_notes, int BPM);
+// struct SongDetailed detailed_every_breath_you_take = SongDetailed
+
 
 
 
