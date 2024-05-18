@@ -80,13 +80,13 @@ void basic_music_player_sm () {
     // char res = play_song(every_breath_you_take, every_breath_you_take_num_notes, every_breath_you_take_bpm ); 
     // char song_speed = '1';
 
-    char res = song_selector(); 
-    char song_speed = get_song_speed(); 
-    change_speed(song_speed);
 
 
     while (1) {
 
+        char res = song_selector(); 
+        char song_speed = get_song_speed(); 
+        change_speed(song_speed);
         switch(res) {
             case '\0':
                 //no change to states
@@ -100,9 +100,9 @@ void basic_music_player_sm () {
 
         
 
-        res = song_selector(); 
-        song_speed = get_song_speed(); 
-        change_speed(song_speed);
+        // res = song_selector(); 
+        // song_speed = get_song_speed(); 
+        // change_speed(song_speed);
 
 
     }
@@ -177,6 +177,7 @@ void change_speed(char input) {
         lcd_clr(); 
         lcd_pos(0,0);
         lcd_puts2("Select 1, 2, or 3");
+        wait_avr(1000);
         
 
         user_in = get_song_speed(); 
