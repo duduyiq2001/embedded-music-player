@@ -35,9 +35,8 @@ void play_song(const PlayingNote *song, int length, int BPM)
     long i;
     for (i = 0; i < length; i++)
     {  
-        if(get_char1() == '*'){
-            while(get_char1()!= '*');
-        }
+
+        
         Duration duration = song[i].duration;
         switch (duration)
         {
@@ -56,6 +55,25 @@ void play_song(const PlayingNote *song, int length, int BPM)
         default:
             break;
         }
+
+        char user_in = get_char1();
+
+        if(user_in == '*'){
+
+
+            // while(get_char1()!= '*');
+            user_in = get_char(); 
+            if(user_in == '*'){
+                continue; 
+            } else {
+                break; 
+            }
+
+        } else if(user_in == '0') {
+            break; 
+        }
+
+
     }
 }
 
