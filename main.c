@@ -522,6 +522,7 @@ int main(void)
             switch(tempo){
                 case '1':
                     BPM = 150;
+                    
                     break;
                 case '2':
                     BPM = 220;
@@ -534,20 +535,25 @@ int main(void)
               char pitch = get_char();
             switch(pitch){
                 case '4':
-                   incre = -1;
-                   break;
+                //    incre = -1;
+                
+
+                    play_song(i_was_never_there_lower, 32, BPM);
+                    break;
                 case '5':
-                    incre = 0;
+                    // incre = 0;
+                    play_song(i_was_never_there, 32, BPM);
                     break;
                 case '6':
-                    incre = 1;
+                    // incre = 1;
+                    play_song(i_was_never_there_higher, 32, BPM);
                     break;
             }
 
-            PlayingNote* processed_song = process_song(i_was_never_there,32, incre);
+            // PlayingNote* processed_song = process_song(i_was_never_there,32, incre);
             
-            play_song(processed_song, 32, BPM);
-            free(processed_song);
+            // play_song(processed_song, 32, BPM);
+            // free(processed_song);
            lcd_clr();
         }
 
@@ -578,12 +584,14 @@ int main(void)
             switch(pitch){
                 case '4':
                    incre = -1;
-                   break;
+
+                    play_song(every_breath_you_take, 128, BPM);
+                    break;
                 case '5':
-                    incre = 0;
+                    play_song(every_breath_you_take, 128, BPM);
                     break;
                 case '6':
-                    incre = 1;
+                    play_song(every_breath_you_take, 128, BPM);
                     break;
             }
 
