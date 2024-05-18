@@ -515,6 +515,9 @@ int main(void)
              // display song on lcd
             lcd_clr();
             lcd_puts2("i was never there");
+            lcd_pos(1, 0); 
+            lcd_puts("BPM 1: 150, 2: 220, 3: 1000");
+
 
             // initialize settings
             int BPM = -1;
@@ -532,6 +535,12 @@ int main(void)
                     break;
             }
             int incre = 0;
+
+            lcd_clr(); 
+            lcd_pos(0,0);
+            lcd_puts2("i was never there");
+            lcd_pos(1,0);
+            lcd_puts2("Pitch: 4: Low, 5: Norm, 6: High");
               char pitch = get_char();
             switch(pitch){
                 case '4':
